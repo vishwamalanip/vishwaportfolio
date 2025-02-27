@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<title>Vishwa- Data Scientist Portfolio</title>
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			background-color: rgb(0, 0, 33);
+			color: white;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 80px;
+			background-color: rgb(18, 18, 62);
+		}
+
+		nav ul {
+			display: flex;
+			justify-content: center;
+		}
+
+		nav ul li {
+			list-style: none;
+			margin: 0 23px;
+		}
+
+		nav ul li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		nav ul li a:hover {
+			color: rgb(153, 153, 226);
+			font-size: 1.04rem;
+		}
+
+		main hr {
+			border: 0;
+			background: #9c97f1;
+			height: 1.2px;
+			margin: 60px 84px;
+		}
+
+		.left {
+			font-size: 1.5rem;
+		}
+
+		.firstSection {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin: 70px 0;
+		}
+
+		.firstSection>div {
+			width: 45%;
+		}
+
+		.leftSection {
+			font-size: 3rem;
+		}
+
+		.leftSection .buttons {
+			padding: 50px 0;
+		}
+
+		.leftSection .btn {
+			padding: 12px;
+			background-color: #1e2167;
+			color: white;
+			border: 2px solid white;
+			border-radius: 6px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		.rightSection img {
+			width: 80%;
+		}
+
+		.purple {
+			color: rgb(170, 107, 228);
+		}
+
+		.text-gray {
+			color: gray;
+		}
+
+		#element {
+			color: rgb(170, 107, 228);
+		}
+
+		.secondSection {
+			max-width: 80vw;
+			margin: auto;
+			height: 80vh;
+		}
+
+		.secondSection h1 {
+			font-size: 1.9rem;
+		}
+
+		.secondSection .box {
+			background: white;
+			width: 69vw;
+			height: 2px;
+			margin: 56px 0;
+			display: flex;
+		}
+
+		.image-top {
+			width: 23px;
+			position: relative;
+			top: -32px;
+			left: -9px;
+		}
+
+		.secondSection .vertical {
+			height: 93px;
+			width: 1px;
+			background-color: white;
+			margin: 0 120px;
+		}
+
+		.vertical-title {
+			position: relative;
+			top: 75px;
+			width: 150px;
+			font-size: 14px;
+		}
+
+		.vertical-desc {
+			position: relative;
+			top: 86px;
+			color: gray;
+			width: 150px;
+			font-size: 9px;
+		}
+
+		footer {
+			background-color: #0e0e1a;
+		}
+
+		.footer {
+			display: flex;
+			padding: 23px 122px;
+			justify-content: space-evenly;
+		}
+
+		.footer>div {
+			width: 323px;
+		}
+
+		footer .footer-rights {
+			text-align: center;
+			color: gray;
+			padding: 12px 0;
+		}
+
+		footer ul li {
+			list-style: none;
+			margin: 0 23px;
+		}
+
+		footer ul li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		footer ul li a:hover {
+			color: rgb(153, 153, 226);
+			font-size: 1.04rem;
+		}
+
+		/* Responsive Design for different screen sizes */
+
+		/* Mobile Devices (up to 600px) */
+		@media (max-width: 600px) {
+			nav {
+				flex-direction: column;
+				height: auto;
+			}
+
+			nav ul {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			nav ul li {
+				margin: 10px 0;
+			}
+
+			.firstSection {
+				flex-direction: column;
+				align-items: center;
+				margin: 40px 0;
+			}
+
+			.firstSection>div {
+				width: 90%;
+				margin-bottom: 30px;
+			}
+
+			.leftSection {
+				font-size: 2rem;
+				text-align: center;
+			}
+
+			.rightSection img {
+				width: 100%;
+			}
+
+			.secondSection {
+				height: auto;
+				max-width: 90vw;
+				margin: 20px;
+			}
+
+			.secondSection h1 {
+				font-size: 1.5rem;
+			}
+
+			.secondSection .box {
+				width: 100%;
+				margin: 40px 0;
+			}
+
+			.vertical-title,
+			.vertical-desc {
+				width: 100%;
+				text-align: center;
+				font-size: 12px;
+			}
+
+			footer .footer {
+				flex-direction: column;
+				padding: 20px 10px;
+			}
+
+			footer .footer>div {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+
+			footer .footer-rights {
+				padding: 10px 0;
+			}
+		}
+
+		/* Tablet Devices (600px to 1024px) */
+		@media (min-width: 601px) and (max-width: 1024px) {
+			nav {
+				flex-direction: row;
+				justify-content: space-between;
+				height: 80px;
+			}
+
+			nav ul {
+				flex-direction: row;
+			}
+
+			nav ul li {
+				margin: 0 15px;
+			}
+
+			.firstSection {
+				flex-direction: row;
+				margin: 50px 0;
+			}
+
+			.firstSection>div {
+				width: 48%;
+			}
+
+			.leftSection {
+				font-size: 2.5rem;
+			}
+
+			.rightSection img {
+				width: 70%;
+			}
+
+			.secondSection {
+				max-width: 80vw;
+				margin: auto;
+				height: auto;
+			}
+
+			.secondSection h1 {
+				font-size: 1.8rem;
+			}
+
+			.secondSection .box {
+				width: 70vw;
+			}
+
+			.vertical-title,
+			.vertical-desc {
+				font-size: 12px;
+			}
+
+			footer .footer {
+				flex-direction: row;
+				padding: 20px 50px;
+			}
+
+			footer .footer>div {
+				width: 30%;
+			}
+
+			footer .footer-rights {
+				padding: 10px 0;
+			}
+		}
+
+		/* Desktop Devices (1024px and up) */
+		@media (min-width: 1025px) {
+			nav {
+				justify-content: space-around;
+				height: 80px;
+			}
+
+			nav ul {
+				flex-direction: row;
+			}
+
+			.firstSection {
+				flex-direction: row;
+				margin: 70px 0;
+			}
+
+			.firstSection>div {
+				width: 45%;
+			}
+
+			.leftSection {
+				font-size: 3rem;
+			}
+
+			.rightSection img {
+				width: 80%;
+			}
+
+			.secondSection {
+				max-width: 80vw;
+				margin: auto;
+				height: 80vh;
+			}
+
+			.secondSection h1 {
+				font-size: 1.9rem;
+			}
+
+			.secondSection .box {
+				width: 69vw;
+			}
+
+			footer .footer {
+				flex-direction: row;
+				padding: 23px 122px;
+			}
+
+			footer .footer>div {
+				width: 323px;
+			}
+
+			footer .footer-rights {
+				padding: 12px 0;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav>
+			<div class="left">Vishwa's Portfolio</div>
+			<div class="right">
+				<ul>
+
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About Me</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="blogs.html">Blog</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+
+		<div id="main">
+			<div class="inner">
+				<header>
+					<h1>Projects <a href="https://github.com/vishwamalanip">Github</a>.</h1>
+					<p>A collection of data-driven solutions showcasing expertise in machine learning, analytics, and
+						visualization. These projects demonstrate problem-solving skills, statistical modeling, and the
+						ability to extract insights from complex datasets to drive informed decisions.</p>
+				</header>
+				<section class="tiles">
+					<article class="style1">
+						<span class="image">
+							<img src="images/fire.avif" alt="" />
+						</span>
+						<a href="https://github.com/vishwamalanip/wild-fire-Detection-deeplearning">
+							<h2>Wild Fire Detection using Deep Learning</h2>
+							<div class="content">
+								<p>This research comprehensively explores various Machine Learning algorithms and
+									methodologies employed in wildfire detection. Through a thorough review of related
+									literature, we analyze the efficacy of different approaches, ranging from deep
+									learning models such as Convolutional Neural Networks (CNNs) to Recurrent Neural
+									Networks (RNNs) and beyond. By synthesizing insights from prior research, we
+									identify trends, strengths, and limitations of existing techniques, laying the
+									groundwork for our proposed solution.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style2">
+						<span class="image">
+							<img src="images/attendance.jpg" alt="" />
+						</span>
+						<a href="https://github.com/vishwamalanip/Smart-Attendance-System-Using-OpenCv">
+							<h2>Smart Attendance System</h2>
+							<div class="content">
+								<p>Simple and user friendly face recognition system that uses advanced technologies like
+									Image Processing with python ,machine learning algorithms and PHP API and for front
+									end we have used HTML & CSS .The main objective of invention is in which number of
+									students present during a lecture is observed (or employees),through webcam their
+									image is captured in the system and then the face is compared with the data stored
+									in Database which later stores the information of attendance.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style3">
+						<span class="image">
+							<img src="images/car.jpg" alt="" />
+						</span>
+						<a href="https://github.com/vishwamalanip/Car-Prediction-MachineLearning">
+							<h2>Car Prediction System</h2>
+							<div class="content">
+								<p>
+									A machine learning-based system that predicts car prices using historical data and
+									key features such as brand, model, year, mileage, fuel type, and engine capacity.
+									Utilizing algorithms like Linear Regression, Random Forest, and XGBoost, the model
+									analyzes market trends and provides accurate price estimates. The system helps
+									buyers and sellers make data-driven decisions in the automotive market.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style4">
+						<span class="image">
+							<img src="images/movie.avif" alt="" />
+						</span>
+						<a href="https://github.com/vishwamalanip/movies_prediction_system">
+							<h2>Movies Recommentation System</h2>
+							<div class="content">
+								<p>Designed a collaborative filtering-based recommendation engine for personalized
+									content suggestions.Optimized matrix factorization techniques for better user
+									experience and retention.</p>
+							</div>
+						</a>
+					</article>
+					<article class="style5">
+						<span class="image">
+							<img src="images/ipl.jpg" alt="" />
+						</span>
+						<a
+							href="https://public.tableau.com/app/profile/vishwa.malani/viz/VishwasFirstWorkBook/TheStoryOfOlympics">
+							<h2>IPL Data Visualization Tableau</h2>
+							<div class="content">
+								<p>
+									This project analyzes Indian Premier League (IPL) data using Tableau to uncover key
+									insights on team performance, player statistics, match outcomes, and historical
+									trends. Interactive dashboards showcase metrics like top run-scorers, highest
+									wicket-takers, win/loss ratios, and venue-based performance, enabling users to
+									explore patterns and make data-driven decisions.</p>
+							</div>
+						</a>
+					</article>
+
+				</section>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="footer">
+			<div class="footer-first">
+				<h3>Vishwa's Data Science Portfolio</h3>
+			</div>
+			<div class="footer-second">
+
+			</div>
+			<div class="footer-third">
+				<ul class="icons">
+
+					<li><a href="https://www.linkedin.com/in/vishwa-malani/" class="icon brands fa-linkedin alt"><span
+								class="label">Linkedin</span></a></li>
+					<li><a href="https://github.com/vishwamalanip" class="icon brands fa-github alt"><span
+								class="label">GitHub</span></a></li>
+					<li><a href="https://www.kaggle.com/vishwamalani" class="icon brands fa-kaggle alt"><span
+								class="label">Kaggle</span></a></li>
+					<!--<li><a href="#" class="icon brands fa-phone alt"><span class="label">Phone</span></a></li> -->
+
+				</ul>
+			</div>
+
+		</div>
+		<div class="footer-rights">
+			Copyright &#169; www.vishwasportfolio.com | All rights reserved
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+	<script>
+		var typed = new Typed('#element', {
+			strings: ['Data Scientist', 'Data Analyst', 'Web Developer', 'Data Visualizer'],
+			typeSpeed: 50,
+		});
+	</script>
+</body>
+
+</html>
