@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <title>Vishwa- Data Scientist Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 70px 0;
+        }
+
+        .firstSection>div {
+            width: 45%;
+        }
+
+        .leftSection {
+
+            font-size: 3rem;
+
+
+        }
+
+        .leftSection .buttons {
+
+            padding: 50px 0;
+
+
+        }
+
+        .leftSection .btn {
+
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 69vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .image-top {
+            width: 23px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 150px;
+            font-size: 14px;
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 86px;
+            color: gray;
+            width: 150px;
+            font-size: 9px;
+
+        }
+
+        footer {
+            background-color: #0e0e1a;
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+
+        .footer>div {
+            width: 323px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        footer ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+        /* Work Experience Section */
+        .work-experience {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f0f2f5;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .section-title:hover {
+            color: #0056b3;
+        }
+
+        .experience-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .experience-box {
+            max-width: 650px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .experience-box:hover {
+            transform: scale(1.05);
+            background-color: #6610f2;
+            color: white;
+            border-color: #003d82;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience-box h3 {
+            font-size: 2rem;
+            color: #0056b3;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .experience-box:hover h3 {
+            color: #ffcc00;
+        }
+
+        .experience-box h4 {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .experience-box:hover h4 {
+            color: #ffeb99;
+        }
+
+        .experience-date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6610f2;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .experience-box:hover .experience-date {
+            color: #ffeb99;
+        }
+
+        .experience-description {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.8;
+            text-align: left;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .experience-box:hover .experience-description {
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .experience-box {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 2.3rem;
+            }
+
+            .experience-box {
+                padding: 20px;
+            }
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Vishwa's Portfolio</div>
+            <div class="right">
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My Name is <span class="purple">Vishwa</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="/assets/Vishwa Malani Resume.pdf"> Resume</a></button>
+                    <button class="btn"><a href="https://github.com/vishwamalanip">Visit Github</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <span class="text-gray">What I have Done So Far</span>
+        <div id="main">
+            <header>
+                <h1>Work <a href="https://www.linkedin.com/in/vishwa-malani/">Experience</a>.</h1>
+
+            </header>
+            <!-- <section class="secondSection">
+            
+                <div class="box">
+                    <div class="vertical">
+                        <img class="image-top" src="datascientist.png">
+                        <div class="vertical-title">
+                            Jr. Data Scientist(2022-2023)
+                        </div>
+                        <div class="vertical-desc">
+                            In my previous role at TechoMax Solution, I successfully designed and
+                            optimized ETL pipelines, ensuring efficient data extraction and transformation
+                            for large datasets.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="datascientist.png">
+                        <div class="vertical-title">
+                            Jr. Data Scientist(2022-2023)
+                        </div>
+                        <div class="vertical-desc">
+                            In my previous role at TechoMax Solution, I successfully designed and
+                            optimized ETL pipelines, ensuring efficient data extraction and transformation
+                            for large datasets.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="datascientist.png">
+                        <div class="vertical-title">
+                            Jr. Data Scientist(2022-2023)
+                        </div>
+                        <div class="vertical-desc">
+                            In my previous role at TechoMax Solution, I successfully designed and
+                            optimized ETL pipelines, ensuring efficient data extraction and transformation
+                            for large datasets.
+                        </div>
+                    </div>
+                    <div class="vertical">
+                        <img class="image-top" src="datascientist.png">
+                        <div class="vertical-title">
+                            Jr. Data Scientist(2022-2023)
+                        </div>
+                        <div class="vertical-desc">
+                            In my previous role at TechoMax Solution, I successfully designed and
+                            optimized ETL pipelines, ensuring efficient data extraction and transformation
+                            for large datasets.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+            <div class="experience-container">
+                <div class="experience-box">
+                    <h3>Data Scientist</h3>
+                    <h4>TechoMax Solution™</h4>
+                    <p class="experience-date">May 2022 - Aug 2023</p>
+                    <p class="experience-description">
+                        ● Worked with large datasets to clean, transform, and structure data for analytical use<br>
+                        ● Built and refined data pipelines, ensuring efficiency and scalability<br>
+                        ● Utilized SQL and Python to query, manipulate, and analyze diverse data sources<br>
+                        ● Conducted data profiling to uncover patterns, trends, and anomalies<br>
+                        ● Created interactive visualizations using Tableau to present data-driven insights<br>
+                        ● Collaborated with stakeholders to ensure data aligned with business objectives<br>
+
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div id="main">
+                <div class="inner">
+                    <header>
+                        <h1>Projects <a href="https://github.com/vishwamalanip">Github</a>.</h1>
+                        <p>A collection of data-driven solutions showcasing expertise in machine learning, analytics,
+                            and
+                            visualization. These projects demonstrate problem-solving skills, statistical modeling, and
+                            the
+                            ability to extract insights from complex datasets to drive informed decisions.</p>
+                    </header>
+                    <section class="tiles">
+                        <article class="style1">
+                            <span class="image">
+                                <img src="images/fire.avif" alt="" />
+                            </span>
+                            <a href="https://github.com/vishwamalanip/wild-fire-Detection-deeplearning">
+                                <h2>Wild Fire Detection using Deep Learning</h2>
+                                <div class="content">
+                                    <p>This research comprehensively explores various Machine Learning algorithms and
+                                        methodologies employed in wildfire detection. Through a thorough review of
+                                        related
+                                        literature, we analyze the efficacy of different approaches, ranging from deep
+                                        learning models such as Convolutional Neural Networks (CNNs) to Recurrent Neural
+                                        Networks (RNNs) and beyond. By synthesizing insights from prior research, we
+                                        identify trends, strengths, and limitations of existing techniques, laying the
+                                        groundwork for our proposed solution.</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="style2">
+                            <span class="image">
+                                <img src="images/attendance.jpg" alt="" />
+                            </span>
+                            <a href="https://github.com/vishwamalanip/Smart-Attendance-System-Using-OpenCv">
+                                <h2>Smart Attendance System</h2>
+                                <div class="content">
+                                    <p>Simple and user friendly face recognition system that uses advanced technologies
+                                        like
+                                        Image Processing with python ,machine learning algorithms and PHP API and for
+                                        front
+                                        end we have used HTML & CSS .The main objective of invention is in which number
+                                        of
+                                        students present during a lecture is observed (or employees),through webcam
+                                        their
+                                        image is captured in the system and then the face is compared with the data
+                                        stored
+                                        in Database which later stores the information of attendance.</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="style3">
+                            <span class="image">
+                                <img src="images/car.jpg" alt="" />
+                            </span>
+                            <a href="https://github.com/vishwamalanip/Car-Prediction-MachineLearning">
+                                <h2>Car Prediction System</h2>
+                                <div class="content">
+                                    <p>
+                                        A machine learning-based system that predicts car prices using historical data
+                                        and
+                                        key features such as brand, model, year, mileage, fuel type, and engine
+                                        capacity.
+                                        Utilizing algorithms like Linear Regression, Random Forest, and XGBoost, the
+                                        model
+                                        analyzes market trends and provides accurate price estimates. The system helps
+                                        buyers and sellers make data-driven decisions in the automotive market.</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="style4">
+                            <span class="image">
+                                <img src="images/movie.avif" alt="" />
+                            </span>
+                            <a href="https://github.com/vishwamalanip/movies_prediction_system">
+                                <h2>Movies Recommentation System</h2>
+                                <div class="content">
+                                    <p>Designed a collaborative filtering-based recommendation engine for personalized
+                                        content suggestions.Optimized matrix factorization techniques for better user
+                                        experience and retention.</p>
+                                </div>
+                            </a>
+                        </article>
+                        <article class="style5">
+                            <span class="image">
+                                <img src="images/ipl.jpg" alt="" />
+                            </span>
+                            <a
+                                href="https://public.tableau.com/app/profile/vishwa.malani/viz/VishwasFirstWorkBook/TheStoryOfOlympics">
+                                <h2>IPL Data Visualization Tableau</h2>
+                                <div class="content">
+                                    <p>
+                                        This project analyzes Indian Premier League (IPL) data using Tableau to uncover
+                                        key
+                                        insights on team performance, player statistics, match outcomes, and historical
+                                        trends. Interactive dashboards showcase metrics like top run-scorers, highest
+                                        wicket-takers, win/loss ratios, and venue-based performance, enabling users to
+                                        explore patterns and make data-driven decisions.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                    </section>
+                </div>
+            </div>
+            <hr>
+            <div class="f-left">
+                <div class="f-content">
+                    <h1 class="F-contact">Contact Us</h1>
+                    <h1 class="f-text">Let's Discuss Your project</h1>
+                </div>
+                <div class="" style="align-items: center;">
+                    <h6 class="f-icon"><i class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z">
+                                </path>
+                            </svg></i><span>+1 (548)-577-2999</span></h6>
+                    <h6 class="f-icon"><i class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 16 16" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z">
+                                </path>
+                            </svg></i><span>vishwamalani29@gmail.com</span></h6>
+                    <h6 class="f-icon"><i class="icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                viewBox="0 0 24 24" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z">
+                                </path>
+                                <path
+                                    d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z">
+                                </path>
+                            </svg></i><span>Toronto, Ontario, Canada</span></h6>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                        <div>
+                            <form class="row g-3 needs-validation formContactus">
+                                <div class="col-md-6  col-sm-6 col-6"><input type="text" class="form-control inputbox "
+                                        id="validationCustom01" placeholder="Name" required=""></div>
+                                <div class="col-md-6  col-sm-6 col-6"><input type="text" class="form-control inputbox"
+                                        id="validationCustom01" placeholder="Phone" required=""></div>
+                                <div class="col-md-6 col-sm-6 col-6"><input type="text" class="form-control inputbox"
+                                        id="validationCustom02" placeholder="E-mail" required=""></div>
+                                <div class="col-md-6 col-sm-6 col-6"><input type="text" class="form-control inputbox "
+                                        id="validationCustom01" placeholder="Subject" required=""></div>
+                                <div class="col-md-12"><textarea type="text"
+                                        class="form-control inputboxmessage inputbox" id="validationCustom03"
+                                        placeholder="Meassage*" required=""></textarea>
+
+                                </div>
+                                <div class="col-12 "><button class="send-btn button float-start">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Vishwa's Data Science Portfolio</h3>
+            </div>
+            <div class="footer-second">
+
+            </div>
+            <div class="footer-third">
+                <ul class="icons">
+
+                    <li><a href="https://www.linkedin.com/in/vishwa-malani/" class="icon brands fa-linkedin alt"><span
+                                class="label">Linkedin</span></a></li>
+                    <li><a href="https://github.com/vishwamalanip" class="icon brands fa-github alt"><span
+                                class="label">GitHub</span></a></li>
+                    <li><a href="https://www.kaggle.com/vishwamalani" class="icon brands fa-kaggle alt"><span
+                                class="label">Kaggle</span></a></li>
+                    <!--<li><a href="#" class="icon brands fa-phone alt"><span class="label">Phone</span></a></li> -->
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.vishwasportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Scientist', 'Data Analyst', 'Web Developer', 'Data Visualizer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
